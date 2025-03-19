@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
+
     @Override
     public String addCategory(String category) {
         if (categoryRepository.findByName(category.toUpperCase()).isPresent()) {
